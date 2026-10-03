@@ -15,7 +15,10 @@ export function MapEmbed({
   height = '350px',
   className = '',
 }: MapEmbedProps) {
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '';
+  const apiKey =
+    (typeof import.meta !== 'undefined' && import.meta.env?.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) ||
+    (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) ||
+    '';
 
   // Use API key if available, otherwise use open Google Maps embed URL
   const embedUrl = apiKey
