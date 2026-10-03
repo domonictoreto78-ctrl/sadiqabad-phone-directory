@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="50%" stop-color="#115E59" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  
+  <!-- Background with rounded squircles -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  
+  <!-- Outer subtle glowing ring -->
+  <circle cx="256" cy="256" r="185" fill="none" stroke="#2DD4BF" stroke-width="6" stroke-opacity="0.25" stroke-dasharray="8 8" />
+
+  <!-- Central Directory Book & Phone Emblem -->
+  <g filter="url(#shadow)">
+    <!-- Book / Directory base -->
+    <path d="M140 160 C140 145 155 135 175 135 L337 135 C357 135 372 145 372 160 L372 355 C372 370 357 380 337 380 L175 380 C155 380 140 370 140 355 Z" fill="#FFFFFF" fill-opacity="0.12" stroke="#2DD4BF" stroke-width="4" />
+    
+    <!-- Phone / Call Emblem -->
+    <path d="M210 190 C200 190 190 200 190 215 C190 275 237 322 297 322 C312 322 322 312 322 302 L310 270 C306 262 297 258 290 262 L275 272 C255 260 252 257 240 237 L250 222 C254 215 250 206 242 202 Z" fill="url(#gold)" />
+    
+    <!-- Sadiqabad Star / Crescent accent -->
+    <circle cx="320" cy="180" r="18" fill="url(#gold)" />
+  </g>
+
+  <!-- Typography initials / mark -->
+  <text x="256" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">SADIQABAD</text>
+  <text x="256" y="472" font-family="'Noto Nastaliq Urdu', 'Amiri', serif" font-size="22" font-weight="bold" fill="#FBBF24" text-anchor="middle">صادق آباد فون ڈائریکٹری</text>
+</svg>
